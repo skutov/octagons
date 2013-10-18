@@ -1,9 +1,7 @@
 #include "classOctagon.h"
 #include <iostream>
 
-using std::cout;
-using std::cin;
-using std::endl;
+using namespace std;
 
 /*
 ** i, j and k are used as iteration variables in for looks throughout this code,
