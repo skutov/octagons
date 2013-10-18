@@ -50,6 +50,21 @@ private:
 		return ((size - sideLine)+1);
 	}
 
+	ind printEigthSide ()
+	{
+	for(int i=1;i < size; i++)
+	{
+		cout << " ";
+	}
+	cout << "\\";
+	for(int i=0;i < size;i++)
+	{
+		cout << "_";
+	}
+	cout << "/";
+		return (0);
+	}
+	
 	int printFilling (int space = 0)
 	{
 
@@ -202,8 +217,8 @@ public:
 
 		collumn = 0;
 
-		//print sixth filling and seventh sides
-		for(int i = size; i >= 1; i--)
+		//print sixth filling and seventh sides minus last line
+		for(int i = size; i >= 2; i--)
 		{
 			collumn = printSixthSide(i);
 			printFilling(i);
@@ -211,262 +226,10 @@ public:
 			line ++;
 		}
 
-		//print eigth (same an first) side
+		//print eigth side
 
-		printFirstSide();
+		printEigthSide();
 
-
-		/*
-
-		switch (type)
-		{
-		case 1:;
-		case 2:;
-		// print top side
-		printFirstSide ();
-
-
-		// Second and third sides
-		for(int i = 1; i <= size; i++)
-		{
-		cout << endl;
-
-		// Leading spaces
-		printSecondSide(i);
-
-		// Calculate middle spaces
-		spaces = size + (i*2);
-
-		// Print middle spaces
-		for(int j=2;j < spaces;j++)
-		{
-		cout << filling;
-		}
-
-		// Other side
-		cout << "\\";
-		}
-
-		// print bottom half ******************************************
-
-		// Fourth and fifth sides
-
-		for (int i = size; i > 1;i--)
-		{
-		cout << endl;
-
-		// Leading spaces
-		printSixthSide(i);
-
-		// Calculate middle spaces
-		spaces = size + (i*2);
-
-		// Print middle spaces
-		for(int j=2;j < spaces;j++)
-		{
-		cout << filling;
-		}
-
-		// Other side
-		cout << "/";
-		}
-
-		// print bottom side
-
-		cout << endl;
-
-		for(int j=1;j < size;j++)
-		{
-		cout << " ";
-		}
-		cout << "\\";
-		for(int j=0;j < size;j++)
-		{
-		cout << "_";
-		}
-		cout << "/";
-		break;
-
-		case 3:
-
-		// Horizontal Lines
-
-		// print top side
-		printFirstSide ();
-
-
-		// Second and third sides
-		for(int i = 1; i <= size; i++)
-		{
-		cout << endl;
-
-		// Leading spaces
-		printSecondSide (i);
-
-		// Calculate middle spaces
-		spaces = size + (i*2);
-
-		if ( i % 2 == 1)
-		{
-		filling = '-';
-		}
-		else
-		{
-		filling = ' ';
-		}
-
-		// Print middle spaces
-		for(int j=2;j < spaces;j++)
-		{
-		cout << filling;
-		}
-
-		// Other side
-		cout << "\\";
-		}
-
-		// print bottom half ******************************************
-
-		// Fourth and fifth sides
-
-		for (int i = size; i > 1;i--)
-		{
-		cout << endl;
-
-		// Leading spaces
-		printSixthSide(i);
-
-		// Calculate middle spaces
-		spaces = size + (i*2);
-
-		if ( i % 2 == 0)
-		{
-		filling = '-';
-		}
-		else
-		{
-		filling = ' ';
-		}
-
-		// Print middle spaces
-		for(int j=2;j < spaces;j++)
-		{
-		cout << filling;
-		}
-
-		// Other side
-		cout << "/";
-		}
-
-		// print bottom side
-
-		cout << endl;
-
-		for(int j=1;j < size;j++)
-		{
-		cout << " ";
-		}
-		cout << "\\";
-		for(int j=0;j < size;j++)
-		{
-		cout << "_";
-		}
-		cout << "/";
-
-		break;
-
-		case 4:
-
-
-		// print top side
-		printFirstSide ();
-
-
-		// Second and third sides
-		for(int i = 1; i <= size; i++)
-		{
-		cout << endl;
-
-		// Leading spaces
-		printSecondSide(i);
-
-		// Calculate middle spaces
-		spaces = size + (i*2);
-
-		// Print middle spaces
-		for(int j=2;j < spaces;j++)
-		{
-		if (characterCount % 2 == 0)
-		{
-		cout << " ";
-		}
-		else
-		{
-		cout << "|";
-		}
-		characterCount++;
-		}
-
-		// Other side
-		cout << "\\";
-		characterCount++;
-		}
-
-		// print bottom half ******************************************
-
-		// Fourth and fifth sides
-
-		for (int i = size; i > 1;i--)
-		{
-		cout << endl;
-		characterCount = 0;
-
-		printSixthSide(i);
-
-		// Calculate middle spaces
-		spaces = size + (i*2);
-
-		// Print middle spaces
-		for(int j=2;j < spaces;j++)
-		{
-		if (characterCount % 2 == 0)
-		{
-		cout << " ";
-		}
-		else
-		{
-		cout << "|";
-		}
-		characterCount++;
-		}
-
-		// Other side
-		cout << "/";
-		}
-
-		// print bottom side
-
-		cout << endl;
-
-		for(int j=1;j < size;j++)
-		{
-		cout << " ";
-		}
-		cout << "\\";
-		for(int j=0;j < size;j++)
-		{
-		cout << "_";
-		}
-		cout << "/";
-
-		// Vertical Lines
-
-		break;
-
-		default: cout << "Invalid type";
-		break;
-		}
-		*/
 		return 0;
 	}
 

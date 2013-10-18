@@ -13,6 +13,7 @@ private:
 	int printFirstSide ();
 	int printSecondSide (int sideLine = 0);
 	int printSixthSide (int sideLine = 0);
+	int printEigthSide ();
 	int printFilling (int space = 0);
 
 public:
