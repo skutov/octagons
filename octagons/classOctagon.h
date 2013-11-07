@@ -1,7 +1,7 @@
 #ifndef OCTAGON_H
 #define OCTAGON_H
 
-class Octagon
+class ClassOctagon
 {
 private:
 
@@ -18,13 +18,29 @@ private:
 
 public:
 
-	Octagon::Octagon (int newSize = 0, int newType = 0);
-	Octagon::~Octagon ();
+	// Constructor and destructor
+	ClassOctagon (int newSize = 0, int newType = 0);
+	~ClassOctagon ();
 
+	// Used to set size parameter, int for length of sides in the 
+	// octagon in characters
 	int setSize (int newSize = 0);
+
+	// will return what size is currently set to
 	int getSize ();
-	int getType ();
+
+	// Used to set type parameter, int with the following meanings
+	// 1: clear		
+	// 2: filled		
+	// 3: horizontal lines
+	// 4: vertical lines	
+	// 5: crossed lines
 	int setType (int newType = 0);
+
+	// will return what type is currently set to
+	int getType ();
+
+	// will print an octagon according to current value of size and type and return 0 when done
 	int display ();
 }
 
